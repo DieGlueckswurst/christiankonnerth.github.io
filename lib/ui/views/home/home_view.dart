@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:christiankonnerth/ui/shared_widgets/buttons/tappable.dart';
 import 'package:christiankonnerth/ui/views/agb/agb_view.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +6,6 @@ import 'package:go_router/go_router.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../../constants/text_styles.dart';
 import '../../shared_widgets/buttons/rounded_border_button.dart';
 import '../datenschutz/datenschutz_view.dart';
 import '../impressum/impressum_view.dart';
@@ -37,24 +35,11 @@ class HomeViewState extends State<HomeView> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 3,
                 ),
-                SizedBox(
-                  child: Center(
-                    child: AutoSizeText(
-                      'CHRISTIAN',
-                      style: AppTextStyles.skModernistH1Bold,
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  child: Center(
-                    child: AutoSizeText(
-                      'KONNERTH',
-                      style: AppTextStyles.skModernistH1Bold,
-                      textAlign: TextAlign.center,
-                      maxLines: 1,
-                    ),
+                Center(
+                  child: Image.asset(
+                    'assets/images/christian_konnerth.png',
+                    height: 100,
+                    fit: BoxFit.contain,
                   ),
                 ),
                 const SizedBox(

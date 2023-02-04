@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       title: 'Hi, I\'m Chris.',
       theme: ThemeData(
         primarySwatch: ColorService.createMaterialColor(
-          Palette.white,
+          Palette.black,
         ),
         scaffoldBackgroundColor: Palette.black,
       ),

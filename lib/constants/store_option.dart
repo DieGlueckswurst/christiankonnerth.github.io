@@ -1,0 +1,4 @@
+enum StoreOption {
+  appStore,
+  googlePlay,
+}

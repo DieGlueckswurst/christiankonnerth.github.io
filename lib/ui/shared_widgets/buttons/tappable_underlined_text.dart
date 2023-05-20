@@ -1,3 +1,4 @@
+import 'package:christiankonnerth/constants/palette.dart';
 import 'package:christiankonnerth/ui/shared_widgets/buttons/tappable.dart';
 import 'package:flutter/material.dart';
 
@@ -7,11 +8,13 @@ import '../../../share_utils/animated_opacity_widgets/text_with_animated_opacity
 class TappableUnderlinedText extends StatelessWidget {
   final String text;
   final VoidCallback onTap;
+  final Color? color;
 
   const TappableUnderlinedText({
     super.key,
     required this.text,
     required this.onTap,
+    this.color,
   });
 
   @override
@@ -22,7 +25,8 @@ class TappableUnderlinedText extends StatelessWidget {
         return TextWithAnimatedOpacity(
           text: text,
           isTapped: isTapped,
-          style: AppTextStyles.skModernistH4Bold.copyWith(
+          color: color ?? Palette.white,
+          style: AppTextStyles.skModernistH4Regular.copyWith(
             decoration: TextDecoration.underline,
           ),
         );

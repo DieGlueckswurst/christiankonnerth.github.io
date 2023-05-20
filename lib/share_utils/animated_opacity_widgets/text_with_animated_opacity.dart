@@ -30,7 +30,7 @@ class TextWithAnimatedOpacity extends StatelessWidget {
       duration: const Duration(milliseconds: 100),
       style: style.copyWith(
         color: color.withOpacity(
-          isTapped ? 0.5 : 1,
+          isTapped ? 0.5 : color.opacity,
         ),
       ),
       child: Text(

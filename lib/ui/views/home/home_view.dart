@@ -1,4 +1,6 @@
 import 'package:christiankonnerth/constants/store_option.dart';
+import 'package:christiankonnerth/share_utils/launch_url.dart';
+import 'package:christiankonnerth/ui/shared_widgets/buttons/tappable_underlined_text.dart';
 import 'package:christiankonnerth/ui/views/agb/agb_view.dart';
 import 'package:christiankonnerth/ui/views/home/store_button.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +53,7 @@ class HomeViewState extends State<HomeView> {
                     StoreButton(
                       storeOption: StoreOption.appStore,
                       url:
-                          'https://apps.apple.com/de/app/christiankonnerth-deine-momente/id1620679156',
+                          'https://apps.apple.com/de/app/onlychris/id6449289908',
                     ),
                     StoreButton(
                       storeOption: StoreOption.googlePlay,
@@ -60,6 +62,18 @@ class HomeViewState extends State<HomeView> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 50,
+                ),
+                TappableUnderlinedText(
+                    text: 'Web-App',
+                    color: Colors.grey,
+                    onTap: () async {
+                      await tryLaunchingUrl(
+                        context,
+                        url: 'https://onlychris-de18d.web.app/projects',
+                      );
+                    }),
                 SizedBox(
                   height: MediaQuery.of(context).size.height / 2,
                 ),

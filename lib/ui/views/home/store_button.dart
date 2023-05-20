@@ -21,11 +21,6 @@ class StoreButton extends StatelessWidget {
           context,
           url: url,
         );
-        tryLaunchingUrl(
-          context,
-          url:
-              'https://play.google.com/store/apps/details?id=com.ckbusiness.christiankonnerth',
-        );
       },
       builder: (context, isTapped) {
         return Image.asset(

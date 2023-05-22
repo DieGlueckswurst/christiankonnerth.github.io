@@ -71,7 +71,7 @@ class HomeViewState extends State<HomeView> {
                     onTap: () async {
                       await tryLaunchingUrl(
                         context,
-                        url: 'https://onlychris-de18d.web.app/projects',
+                        url: 'https://onlychris-de18d.web.app/',
                       );
                     }),
                 SizedBox(
